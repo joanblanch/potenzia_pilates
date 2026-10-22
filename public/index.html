@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Núcleo Pilates · Reservas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">N</span>Núcleo Pilates</div>
+    <div class="controls">
+      <label class="field">Entrar como
+        <select id="user-select"></select>
+      </label>
+      <label class="field">Hora de la demo
+        <input id="clock-input" type="datetime-local">
+      </label>
+      <button id="clock-real" class="btn-ghost" type="button">Hora real</button>
+      <button id="reset" class="btn-ghost" type="button">Reiniciar datos</button>
+    </div>
+  </header>
+
+  <main id="app" aria-live="polite"></main>
+
+  <dialog id="confirm">
+    <form method="dialog">
+      <h2 id="confirm-title"></h2>
+      <p id="confirm-text"></p>
+      <menu>
+        <button value="back" class="btn-ghost">Volver</button>
+        <button value="ok" id="confirm-ok" class="btn-danger">Sí, cancelar</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js" type="module"></script>
+</body>
+</html>
